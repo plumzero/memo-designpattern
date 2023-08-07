@@ -28,6 +28,7 @@ public:
   virtual std::string getName() = 0;
   virtual int getSize() = 0;
   virtual Entry* add(Entry* entry) { /** File 类不应该支持此方法 */
+    (void) entry;
     throw std::runtime_error("not support file");
   }
   std::string toString() {

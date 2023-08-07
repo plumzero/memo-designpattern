@@ -15,14 +15,12 @@ class Observer
 {
 public:
   virtual void update(NumberGenerator* generator) = 0;
+  virtual ~Observer() {}
 };
 
 /** 要观察的对象基类 */
 class NumberGenerator
-{
-public:
-  typedef int value_type;
-  
+{  
 public:
   std::list<Observer*> observers; 
 public:
@@ -42,6 +40,7 @@ public:
   }
   virtual int getNumber() = 0;
   virtual void execute() = 0;
+  virtual ~NumberGenerator() {}
 };
 
 class RandomNumberGenerator : public NumberGenerator
