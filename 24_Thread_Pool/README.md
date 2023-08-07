@@ -13,7 +13,7 @@
 ## 技术分析
 - 流程图示意如下
   <h1 align="center">
-    <img width="848" height="441" src=".resource/threadpool-1.jpg" alt="...">
+    <img width="848" height="441" src="img/threadpool-1.jpg" alt="...">
   </h1>
 - 一开始线程池会启动一定数量的线程，这些线程属于异步层，主要用来并行处理排队层中的
   任务，如果排队层中的任务数为空，则这些线程等待任务的到来，如果发现队列中有任务了，

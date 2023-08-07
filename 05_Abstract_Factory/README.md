@@ -1,5 +1,5 @@
 
-在工厂模式中，已经通过模板的方式对标识符和类型进行了很好的处理。不过这种处理在有些情况下却变得不好，比如在封装注册
+平时很少用到，略。
 
 ### 说明
 
@@ -28,18 +28,3 @@ Mechanical, Electronic, Electrical 作为组成产品的三个零件，很明显
 ### 其他
 
 抽象工厂模式可以比较方便的扩展工厂，但扩展零件工作量相对要更大一些。
-
-### 相关的设计模式
-
-Builder 模式
-- Abstract Factory 模式通过调用抽象产品的接口(API)来组装抽象产品，生成具有复杂结构的实例。
-- Builder 模式则是分阶段地制作复杂实例。
-
-Factory Method 模式
-- 有时 Abstract Factory 模式中零件和产品的生成会使用到 Factory Method 模式。
-
-Composite 模式
-- 有时 Abstract Factory 模式在制作产品时会使用 Composite 模式。
-
-Singleton 模式
-- 有时 Abstract Factory 模式中的具体工厂会使用 Singleton 模式。
