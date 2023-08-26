@@ -22,21 +22,18 @@ public:
   }
 };
 
-class Operation
+class Operation : public JsonOperation, CsvOperation
 {
 public:
   void read_json() {
-    jop.read();
+    JsonOperation::read();
   }
   void write_json() {
-    jop.write();
+    write();
   }
   void read_csv() {
-    cop.read();
+    CsvOperation::read();
   }
-private:
-  JsonOperation jop;
-  CsvOperation  cop;
 };
 
 int main()
