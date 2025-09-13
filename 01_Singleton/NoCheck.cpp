@@ -7,21 +7,16 @@
 
 class SingleTon
 {
-  static SingleTon* instance;
 public:
   SingleTon(){ std::cout << "Construct SingleTon" << std::endl; }
   ~SingleTon(){}
 public:
   static SingleTon* getInstance()
   {
-    if (nullptr == instance) {
-      instance = new SingleTon();
-    }
-    return instance;
+    static SingleTon instance;
+    return &instance;
   }
 };
-
-SingleTon* SingleTon::instance = nullptr;
 
 int main()
 {
